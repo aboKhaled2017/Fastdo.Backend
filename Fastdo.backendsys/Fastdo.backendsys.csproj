@@ -1,0 +1,131 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+ 
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+     <!--<TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>-->
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <AspNetCoreModuleName>AspNetCoreModuleV2</AspNetCoreModuleName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+    <UserSecretsId>d4eb3998-19ae-44ea-bb06-a728553d8ee4</UserSecretsId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AltMigrations\**" />
+    <Compile Remove="LocalMigrations\**" />
+    <Compile Remove="Logs\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="AltMigrations\**" />
+    <Content Remove="LocalMigrations\**" />
+    <Content Remove="Logs\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="AltMigrations\**" />
+    <EmbeddedResource Remove="LocalMigrations\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="AltMigrations\**" />
+    <None Remove="LocalMigrations\**" />
+    <None Remove="Logs\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20201006152153_add_stkDrugRequestInPackge_TB.cs" />
+    <Compile Remove="Migrations\20201006152153_add_stkDrugRequestInPackge_TB.Designer.cs" />
+    <Compile Remove="Migrations\20201006153406_add_stkDrugRequestInPackge_TB_Fix.cs" />
+    <Compile Remove="Migrations\20201006153406_add_stkDrugRequestInPackge_TB_Fix.Designer.cs" />
+    <Compile Remove="Migrations\20201006153525_add_stkDrugRequestInPackge_TB_Fix2.cs" />
+    <Compile Remove="Migrations\20201006153525_add_stkDrugRequestInPackge_TB_Fix2.Designer.cs" />
+    <Compile Remove="Migrations\20201006153658_add_stkDrugRequestInPackge_TB_Fix3.cs" />
+    <Compile Remove="Migrations\20201006153658_add_stkDrugRequestInPackge_TB_Fix3.Designer.cs" />
+    <Compile Remove="Migrations\20201006191934_add_stkDrugRequestInPackge_TB_Fix4.cs" />
+    <Compile Remove="Migrations\20201006191934_add_stkDrugRequestInPackge_TB_Fix4.Designer.cs" />
+    <Compile Remove="Migrations\20201009083901_add_stockInStkDrugPackageTb_fix1.cs" />
+    <Compile Remove="Migrations\20201009083901_add_stockInStkDrugPackageTb_fix1.Designer.cs" />
+    <Compile Remove="Migrations\20201009090322_add_stockInStkDrugPackageTb_fix2.cs" />
+    <Compile Remove="Migrations\20201009090322_add_stockInStkDrugPackageTb_fix2.Designer.cs" />
+    <Compile Remove="Migrations\20201012082645_dbUpdate2.cs" />
+    <Compile Remove="Migrations\20201012082645_dbUpdate2.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="nlog.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="LocalMigrations.rar" />
+    <None Remove="system.db" />
+  </ItemGroup>
+  
+ 
+   
+
+  <ItemGroup>
+    <PackageReference Include="EFCore.BulkExtensions" Version="2.6.4" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="GraphQL" Version="2.4.0" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.3.0" />
+    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="4.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="IdentityServer4" Version="2.5.4" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0">
+      <AllowExplicitVersion>true</AllowExplicitVersion>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
+
+    <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.2.0" />
+
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="2.2.0" />
+
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="NHibernate" Version="5.2.7" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.3" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.7.0" />
+    <PackageReference Include="NSwag.Core" Version="13.7.0" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.1.5" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.1" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Areas\AdminPanel\Data\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="Areas\AdminPanel\Views\Shared\_CookieConsentPartial.cshtml" />
+    <None Include="Areas\AdminPanel\Views\Shared\_Layout.cshtml" />
+    <None Include="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fastdo.Core\Fastdo.Core.csproj" />
+  </ItemGroup>
+</Project>
